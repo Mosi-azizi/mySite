@@ -10,7 +10,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">JHON DEO ALEX</a>
+                <a class="navbar-brand" href="#"> profile.name.solve </a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
@@ -30,48 +30,60 @@
         <div class="container">
             <div class="row centered">
                 <div class="col-md-8 col-md-offset-2">
-                    <h1><strong> Jhon Deo Alex</strong>
+                    {% for profile in profile %}
+                    <h1><strong> {{ profile.name }}</strong>
 
                     </h1>
                      <br /> <br /> <br />
-                    <h2> Web / Graphics Designer</h2>
+                    <h2> {{ profile.short_intro }}</h2>
                      <br />
                   <a href="#about-section">  <i class="fa fa-angle-double-down fa-5x down-icon"></i> </a>
+                    {% endfor %}
                 </div>
             </div>
-
         </div>
-
     </div>
       <!--END HEADER SECTION -->
     <!--ABOUT SECTION -->
     <div id="about-section" >
+     {% for profile in profile %}
         <div class="container" >
             <div class="row main-top-margin text-center">
                 <div class="col-md-8 col-md-offset-2 " data-scrollreveal="enter top and move 100px, wait 0.3s">
                     <h1>Who Am I ?</h1>
                     <h4>
-                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                         Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
+                       {{ profile.intro }}
                     </h4>
                 </div>
             </div>
             <!-- ./ Main Heading-->
             <div class="row main-low-margin text-center">
+
                 <div class="col-md-3 " data-scrollreveal="enter left and move 100px, wait 0.4s">
+
                     <img class="img-circle" src="assets/img/team/team1.png" alt="">
-                    <h4><strong>Jhon Deo Alex</strong> </h4>
+                        <h4><strong>{{ profile.name }}</strong> </h4>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                         Curabitur nec nisl odio.
+                        {{ profile.intro }}
 
                     </p>
                     <p>
-                       <a href="#"><i class="fa fa-facebook-square fa-2x color-facebook"></i></a>
-                        <a href="#"><i class="fa fa-twitter-square fa-2x color-twitter"></i></a>
-                        <a href="#"><i class="fa fa-google-plus-square fa-2x color-google-plus"></i></a>
-                        <a href="#"><i class="fa fa-linkedin-square fa-2x color-linkedin"></i></a>
-                        <a href="#"><i class="fa fa-pinterest-square fa-2x color-pinterest"></i></a>
+                        {% if profile.social_github %}
+                       <a href="{{ profile.social_github }}" target="_blank"><i class="fa fa-github-square fa-2x color-github"></i></a>
+                        {% endif %}
+                        {% if profile.social_twitter %}
+                        <a href="{{ profile.social_twitter }}" target="_blank"><i class="fa fa-twitter-square fa-2x color-twitter"></i></a>
+                        {% endif %}
+                        {% if profile.social_website %}
+                        <a href="{{ profile.social_website }}" target="_blank"><i class="fa fa-google-plus-square fa-2x color-google-plus"></i></a>
+                        {% endif %}
+                        {% if profile.social_linkedin %}
+                        <a href="{{ profile.social_linkedin }}" target="_blank"><i class="fa fa-linkedin-square fa-2x color-linkedin"></i></a>
+                        {% endif %}
+                        {% if profile.social_youtube %}
+                        <a href="{{ profile.social_youtube }}" target="_blank"><i class="fa fa-youtube-square fa-2x color-youtube"></i></a>
+                        {% endif %}
+                        <a href="#" target="_blank"><i class="fa fa-pinterest-square fa-2x color-pinterest"></i></a>
 
                     </p>
 
@@ -80,26 +92,16 @@
                 <div class="col-md-7 col-sm-7 col-md-offset-1  text-justify" data-scrollreveal="enter right and move 100px, wait 0.4s">
                     <h3> Lorem ipsum dolor sit amet Riopsh</h3>
                     <p>
-                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                         Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
-                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                         Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
-                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                         Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
+                        {{ profile.bio }}
 
                     </p>
-                    <p>
-                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                         Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
-                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                         Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
 
-                    </p>
                 </div>
+
             </div>
               <!-- ./ Row Content-->
         </div>
+     {% endfor %}
     </div>
     <!-- END ABOUT SECTION -->
 
