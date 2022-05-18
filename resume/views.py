@@ -8,7 +8,8 @@ from .forms import MessageFrom
 
 
 def myResume(request):
-    profiles = Profile.objects.all()
+    # profiles = Profile.objects.all()
+    profile = Profile.objects.get(username__iexact='sa_azizi')
     skills = Skill.objects.all()
     messageForm = MessageFrom()
     if request.method == 'POST':
@@ -20,6 +21,6 @@ def myResume(request):
 
 
     context ={
-        'profile':profiles,'skills':skills,'form':messageForm
+        'profile':profile,'skills':skills,'form':messageForm
     }
     return render(request,'resume/profile.html',context)
