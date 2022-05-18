@@ -16,7 +16,7 @@ def myResume(request):
         if messageForm.is_valid():
             messageForm.save()
             return redirect(myResume)
-            # messages.success(request,'Your message successfully sent!')
+            messages.success(request,'Your message successfully sent!')
 
 
     context ={
