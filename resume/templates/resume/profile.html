@@ -20,7 +20,16 @@
       </div>
       <div class="section">
         <div class="container">
-          <div class="button-container"><a class="btn btn-default btn-round btn-lg btn-icon" href="#" rel="tooltip" title="Follow me on Facebook"><i class="fa fa-facebook"></i></a><a class="btn btn-default btn-round btn-lg btn-icon" href="#" rel="tooltip" title="Follow me on Twitter"><i class="fa fa-twitter"></i></a><a class="btn btn-default btn-round btn-lg btn-icon" href="#" rel="tooltip" title="Follow me on Google+"><i class="fa fa-google-plus"></i></a><a class="btn btn-default btn-round btn-lg btn-icon" href="#" rel="tooltip" title="Follow me on Instagram"><i class="fa fa-instagram"></i></a></div>
+          <div class="button-container">
+              <a class="btn btn-default btn-round btn-lg btn-icon" target="_blank" href="{{ profile.social_github }}" rel="tooltip" title="Follow me on Github"><i class="fa fa-github"></i></a>
+              <a class="btn btn-default btn-round btn-lg btn-icon" target="_blank" href="{{ profile.social_twitter }}" rel="tooltip" title="Follow me on Twitter"><i class="fa fa-twitter"></i></a>
+              <a class="btn btn-default btn-round btn-lg btn-icon" target="_blank" href="{{ profile.social_linkedin }}" rel="tooltip" title="Follow me on Linkedin"><i class="fa fa-linkedin"></i></a>
+              <a class="btn btn-default btn-round btn-lg btn-icon" target="_blank" href="{{ profile.social_youtube }}" rel="tooltip" title="Follow me on Youtube"><i class="fa fa-youtube"></i></a>
+              <a class="btn btn-default btn-round btn-lg btn-icon" target="_blank" href="{{ profile.telegram }}" rel="tooltip" title="Follow me on Telegram"><i class="fa fa-telegram"></i></a>
+              <a class="btn btn-default btn-round btn-lg btn-icon" target="_blank" href="{{ profile.whatsapp }}" rel="tooltip" title="Follow me on Whatsapp"><i class="fa fa-whatsapp"></i></a>
+              <a class="btn btn-default btn-round btn-lg btn-icon" target="_blank" href="{{ profile.skype }}" rel="tooltip" title="Follow me on Skype"><i class="fa fa-skype"></i></a>
+{#              <a class="btn btn-default btn-round btn-lg btn-icon" href="{{ profile.microsoft_team }}" rel="tooltip" title="Follow me on Microsoft Teams"><i class="fa fa-microsoft-teams"></i></a>#}
+          </div>
         </div>
       </div>
     </div>
@@ -481,7 +490,16 @@
 </div></div>
     </div>
     <footer class="footer">
-      <div class="container text-center"><a class="cc-facebook btn btn-link" href="#"><i class="fa fa-facebook fa-2x " aria-hidden="true"></i></a><a class="cc-twitter btn btn-link " href="#"><i class="fa fa-twitter fa-2x " aria-hidden="true"></i></a><a class="cc-google-plus btn btn-link" href="#"><i class="fa fa-google-plus fa-2x" aria-hidden="true"></i></a><a class="cc-instagram btn btn-link" href="#"><i class="fa fa-instagram fa-2x " aria-hidden="true"></i></a></div>
+      <div class="container text-center">
+          <a class="cc-github btn btn-link" target="_blank" href="{{ profile.social_github }}"><i class="fa fa-github fa-2x " aria-hidden="true"></i></a>
+          <a class="cc-twitter btn btn-link " target="_blank" href="{{ profile.social_twitter  }}"><i class="fa fa-twitter fa-2x " aria-hidden="true"></i></a>
+          <a class="cc-google-plus btn btn-link" target="_blank" href="{{ profile.social_linkedin }}"><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+          <a class="cc-instagram btn btn-link" target="_blank" href="{{ profile.social_youtube }}"><i class="fa fa-youtube fa-2x " aria-hidden="true"></i></a>
+          <a class="cc-instagram btn btn-link" target="_blank" href="{{ profile.telegram }}"><i class="fa fa-telegram fa-2x " aria-hidden="true"></i></a>
+          <a class="cc-instagram btn btn-link" target="_blank" href="{{ profile.whatsapp }}"><i class="fa fa-whatsapp fa-2x " aria-hidden="true"></i></a>
+          <a class="cc-instagram btn btn-link" target="_blank" href="{{ profile.skype }}"><i class="fa fa-skype fa-2x " aria-hidden="true"></i></a>
+
+      </div>
       <div class="h4 title text-center">Anthony Barnett</div>
       <div class="text-center text-muted">
         <p>&copy; Creative CV. All rights reserved.<br>Design - <a class="credit" href="https://templateflip.com" target="_blank">TemplateFlip</a></p>
