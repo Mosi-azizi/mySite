@@ -22,6 +22,6 @@ def myResume(request):
 
 
     context ={
-        'profile':profile,'skill':skill,'form':messageForm
+        'profile':profile,'skill':skill,'messageForm':messageForm
     }
     return render(request,'resume/profile.html',context)
