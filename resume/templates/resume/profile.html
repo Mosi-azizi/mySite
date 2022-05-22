@@ -10,7 +10,7 @@
 <div class="profile-page">
   <div class="wrapper">
     <div class="page-header page-header-small" filter-color="green">
-      <div class="page-header-image" data-parallax="true" style="background-image: url('{% static 'images/cc-bg-1.jpg' %}')"></div>
+      <div class="page-header-image" data-parallax="true" style="background-image: url({{ siteSetting.bk_image.url }})"></div>
       <div class="container">
         <div class="content-center">
           <div class="cc-profile-image"><a href="#"><img src="{{ profile.profile_image.url }}" alt="Image"/></a></div>
@@ -306,7 +306,7 @@
   </div>
 </div>
 <div class="section" id="contact">
-  <div class="cc-contact-information" style="background-image: url('{% static 'images/staticmap.png' %}')">
+  <div class="cc-contact-information" style="background-image: url({{ siteSetting.map.url }})">
     <div class="container">
       <div class="cc-contact">
         <div class="row">
@@ -385,9 +385,9 @@
           <a class="cc-instagram btn btn-link" target="_blank" href="{{ profile.skype }}"><i class="fa fa-skype fa-2x " aria-hidden="true"></i></a>
 
       </div>
-      <div class="h4 title text-center">Anthony Barnett</div>
+      <div class="h4 title text-center">Designer : {{ siteSetting.designer }}</div>
       <div class="text-center text-muted">
-        <p>&copy; Creative CV. All rights reserved.<br>Design - <a class="credit" href="https://templateflip.com" target="_blank">TemplateFlip</a></p>
+        <p>{{ siteSetting.copy_right }}<br>Front-End : {{ siteSetting.frontend_technology }}<br>Back-End : {{ siteSetting.backend_technology }}</p>
       </div>
     </footer>
     <script src="{% static 'js/core/jquery.3.2.1.min.js' %}"></script>
