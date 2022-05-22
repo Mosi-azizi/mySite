@@ -78,6 +78,18 @@ class Employment(models.Model):
     class Meta:
         ordering =['-start_date']
 
+
+class Reference(models.Model):
+    owner = models.ForeignKey(Profile, on_delete=models.CASCADE, null=True, blank=True)
+    Name = models.CharField(max_length=200, blank=True, null=True)
+    job_title = models.CharField(max_length=200, blank=True, null=True)
+    reference_image = models.ImageField(default='profiles/user-default.jpg', null=True, blank=True, upload_to='profiles/')
+    description = models.TextField()
+    id = models.UUIDField(default=uuid.uuid4, unique=True, primary_key=True, editable=False)
+
+    def __str__(self):
+        return  str(self.Name)
+
 class Message(models.Model):
     name = models.CharField(max_length=200, null=True , blank=True, verbose_name='Name')
     email = models.EmailField(max_length=200, null=True, blank=True, verbose_name='E-mail')

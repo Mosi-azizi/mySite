@@ -11,9 +11,9 @@ def myResume(request):
     # profiles = Profile.objects.all()
     profile = Profile.objects.get(username__iexact='sa_azizi')
     # skill = profile.skill_set.get(owner__skill='sa_azizi')
-    skill = Skill.objects.all()
-    education = Education.objects.all()
-    experience = Employment.objects.all()
+    # skill = Skill.objects.all()
+    # education = Education.objects.all()
+    # experience = Employment.objects.all()
     messageForm = MessageFrom()
     if request.method == 'POST':
         messageForm = MessageFrom(request.POST)
@@ -24,7 +24,7 @@ def myResume(request):
 
 
     context ={
-        'profile':profile,'skill':skill,'messageForm':messageForm,
-        'education':education,'experience':experience
+        'profile':profile,'messageForm':messageForm,
+        # ,'skill':skill,'education':education,'experience':experience
     }
     return render(request,'resume/profile.html',context)
