@@ -8,7 +8,7 @@ class Profile(models.Model):
     username = models.CharField(max_length=200, null=True, blank=True)
     short_intro = models.CharField(max_length=200, blank=True, null=True)
     intro = models.CharField(max_length=200,null=True,blank=True)
-    bio = models.TextField(max_length=200, blank=True, null=True)
+    bio = models.TextField(blank=True, null=True)
     address = models.CharField(max_length=200, blank=True, null=True)
     profile_image = models.ImageField(default='profiles/user-default.jpg', null=True, blank=True, upload_to='profiles/')
     social_github = models.CharField(max_length=200, blank=True, null=True)
@@ -53,7 +53,6 @@ class Education(models.Model):
     school = models.CharField(max_length=200, blank=True, null=True)
     start_date = models.DateField(blank=True,null=True)
     end_date = models.DateField(blank=True,null=True)
-    description = models.TextField()
     id = models.UUIDField(default=uuid.uuid4, unique=True,
                           primary_key=True, editable=False)
 
