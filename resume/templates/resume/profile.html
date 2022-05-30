@@ -15,7 +15,11 @@
         <div class="content-center">
           <div class="cc-profile-image"><a href="#"><img src="{{ profile.profile_image.url }}" alt="Image"/></a></div>
           <div class="h2 title">{{ profile.name }}</div>
-          <p class="category text-white">{{ profile.intro }}</p><a class="btn btn-primary smooth-scroll mr-2" href="#contact" data-aos="zoom-in" data-aos-anchor="data-aos-anchor">Hire Me</a><a class="btn btn-primary" href="#" data-aos="zoom-in" data-aos-anchor="data-aos-anchor">Download CV</a>
+          <p class="category text-white">{{ profile.intro }}</p>
+            <a class="btn btn-primary smooth-scroll mr-2" href="#contact" data-aos="zoom-in" data-aos-anchor="data-aos-anchor">Hire Me</a>
+            {% if profile.resume_file %}
+            <a class="btn btn-primary" target="_blank" href="{{ profile.resume_file.url }}" data-aos="zoom-in" data-aos-anchor="data-aos-anchor">Download CV</a>
+            {% endif %}
         </div>
       </div>
       <div class="section">

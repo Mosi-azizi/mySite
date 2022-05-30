@@ -24,6 +24,7 @@ class Profile(models.Model):
     phone_number = models.CharField(max_length=200,blank=True,null=True)
     mobile_number = models.CharField(max_length=200, blank=True, null=True)
     language = models.CharField(max_length=200,blank=True,null=True)
+    resume_file = models.FileField(upload_to='pdf',blank=True,null=True)
     created = models.DateTimeField(auto_now_add=True)
     id = models.UUIDField(default=uuid.uuid4, unique=True,
                           primary_key=True, editable=False)
