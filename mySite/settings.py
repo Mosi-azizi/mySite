@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-7(1(5-bxk0l4mi6_1y7-5h0bmt6pk=3g5&-ak##)yg!smrf0(m
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['https://samaziziresume.herokuapp.com','127.0.0.1','localhost']
 
 
 # Application definition
@@ -117,6 +117,15 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 
 USE_TZ = True
+
+
+# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 578
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = os.environ.get('SAM_EMAIL')
+EMAIL_HOST_PASSWORD = os.environ.get('SAM_EMAIL_PASS')
 
 
 # Static files (CSS, JavaScript, Images)
