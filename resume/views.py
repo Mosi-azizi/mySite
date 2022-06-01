@@ -21,7 +21,7 @@ def myResume(request):
         if form.is_valid():
             message_income = form.save(commit=False)
             # print(message_income.email)
-            # send_welcomeMail(subject, message, message_income.email)
+            send_welcomeMail(subject, message, message_income.email)
             message_income.save()
             messages.success(request, 'Your message successfully sent!')
             return redirect(myResume)
