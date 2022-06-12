@@ -2,13 +2,27 @@
 
 <footer class="footer">
       <div class="container text-center">
+          {% if profile.socila_github %}
           <a class="cc-github btn btn-link" target="_blank" href="{{ profile.social_github }}"><i class="fa fa-github fa-2x " aria-hidden="true"></i></a>
+          {% endif %}
+          {% if profile.social_twitter %}
           <a class="cc-twitter btn btn-link " target="_blank" href="{{ profile.social_twitter  }}"><i class="fa fa-twitter fa-2x " aria-hidden="true"></i></a>
+          {% endif %}
+           {% if profile.social_linkedin %}
           <a class="cc-google-plus btn btn-link" target="_blank" href="{{ profile.social_linkedin }}"><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+          {% endif %}
+          {% if profile.social_youtube %}
           <a class="cc-instagram btn btn-link" target="_blank" href="{{ profile.social_youtube }}"><i class="fa fa-youtube fa-2x " aria-hidden="true"></i></a>
+         {% endif %}
+         {% if  profile.telegram %}
           <a class="cc-instagram btn btn-link" target="_blank" href="{{ profile.telegram }}"><i class="fa fa-telegram fa-2x " aria-hidden="true"></i></a>
+         {% endif %}
+         {% if profile.whatsapp %}
           <a class="cc-instagram btn btn-link" target="_blank" href="{{ profile.whatsapp }}"><i class="fa fa-whatsapp fa-2x " aria-hidden="true"></i></a>
+         {% endif %}
+         {% if profile.skype %}
           <a class="cc-instagram btn btn-link" target="_blank" href="{{ profile.skype }}"><i class="fa fa-skype fa-2x " aria-hidden="true"></i></a>
+         {% endif %}
 
       </div>
       <div class="h4 title text-center">Designer : {{ siteSetting.designer }}</div>
