@@ -1,3 +1,4 @@
+
 {% load static %}
 <!doctype html>
 <html lang="en">
@@ -14,6 +15,18 @@
 
 	</head>
 	<body class="img js-fullheight" style="background-image: url({% static 'images/bg.jpg' %});">
+           <div class="text-center">
+        {% if messages %}
+        {% for message in messages %}
+            <div class="alert  alert--{{message.tags}} ">
+                 <p class="alert__message" style="color: #e35f5f" >{{message}}
+                     <a><button class="alert__close btn--sm" >x</button></a>
+                 </p>
+
+            </div>
+        {% endfor %}
+        {% endif %}
+    </div>
 	<section class="ftco-section">
 		<div class="container">
 			<div class="row justify-content-center">
@@ -62,5 +75,7 @@
   <script src="{% static 'js/main.js' %}"></script>
 
 	</body>
+<script src="{% static 'uikit/app.js' %}"></script>
+<script src="{% static 'js/main.js' %}"></script>
 </html>
 

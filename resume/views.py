@@ -46,18 +46,18 @@ def loginUser(request):
         # print(request.POST)
         username = request.POST['username'].lower()
         password = request.POST['password']
-        try:
-            user = User.objects.get(username=username)
-        except:
-            # print('Username dose not exist!')
-            messages.error(request, 'Username dose not exist!')
+        # try:
+        #     user = User.objects.get(username=username)
+        # except User.DoesNotExist:
+        #     # print('Username dose not exist!')
+        #     messages.error(request, 'Username dose not exist!')
+
         user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
             return redirect('/')
         else:
-            # print('Username OR password is incorrect')
-            messages.error(request, 'Username OR password is incorrect')
+            messages.error(request, ' Please check Username or Password !')
     context ={}
     return render(request, 'login/login-register.html', context)
 
